@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pediatric Maintenance Fluid Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="assets/images/IV_launcher.png" type="image/png" />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="logo-container">
+        <div class="nav">
+          <img src="assets/images/IV.png" alt="Logo" />
+          <div class="title">
+            <span>Pediatric</span>
+            <span>Maintenance Fluid</span>
+            <span>Calculator</span>
+          </div>
+        </div>
+        <div class="info">
+          <button class="center" id="info">
+            <img src="assets/images/info.png" alt="info" height="20" />
+          </button>
+        </div>
+      </div>
+      <div class="data-container">
+        <div class="duration-container">
+          <label for="halfday"
+            ><input type="radio" name="duration" id="halfday" checked />12
+            hrs</label
+          >
+          <label for="fullday"
+            ><input type="radio" name="duration" id="fullday" />24 hrs</label
+          >
+        </div>
+        <div class="cont-one">
+          <p>Total Fluid:</p>
+          <h3 id="total-fluid">0.0 ml</h3>
+        </div>
+        <div class="cont-two">
+          <p>NS(1/3) = <span id="ns-third">0.0ml</span></p>
+          <p>D10(2/3) = <span id="d10-two-third">0.0ml</span></p>
+        </div>
+        <div class="cont-three">
+          <p>Maintenance Fluid Volume</p>
+          <p>NS = <span id="ns-vol">0.0ml</span></p>
+          <p>D5 = <span id="d5-vol">0.0ml</span></p>
+          <p>D40 = <span id="d40-vol">0.0ml</span></p>
+        </div>
+      </div>
+      <div class="weight-container">
+        <button class="minus" id="minus">-</button>
+        <div class="input-weight">
+          <h2 id="weight">0.0</h2>
+          <p>kg</p>
+        </div>
+        <button class="plus" id="plus">+</button>
+      </div>
+      <div class="info-popup hide">
+        <div class="info-bar center">
+          <h2>Information</h2>
+          <button id="close" class="close center">
+            <img
+              src="assets/images/close.png"
+              alt="close"
+              height="30"
+              onclick="hideInfo()"
+            />
+          </button>
+        </div>
+        <div class="information-1 center">
+          <p>D10 = 10% Dextrose</p>
+          <p>D5 = 5% Dextrose</p>
+          <p>D40 = 40% Dextrose</p>
+        </div>
+        <div class="information-2 center">
+          <p>How to prepare D10:</p>
+          <p>D10 = 85% of D5 + 15% of D40</p>
+        </div>
+        <div class="information-3 center">
+          <img src="assets/images/guide1.jpg" alt="guide" height="80" />
+          <p>Click on the weight input for larger values</p>
+        </div>
+        <div class="about center">
+          <p>Developed by:<br /><strong>Dawit Tefera</strong></p>
+          <p>dawit.ttamiru@gmail.com</p>
+          <p>&#169; Copyright 2024</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="popupInput hide">
+      <label for="weightInput" name="weightInput">Input weight </label>
+      <input type="number" id="weightInput" min="0" max="50" />
+      <button class="ok" id="ok">ok</button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
